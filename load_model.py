@@ -27,4 +27,4 @@ test_df['duration'] = test_df.lpep_dropoff_datetime - test_df.lpep_pickup_dateti
 test_df.duration = test_df.duration.apply(lambda td: td.total_seconds() / 60)
 target = 'duration' # label
 y_new_real = test_df[target].values
-mean_squared_error(y_new_real, y_pred, squared=False)
+print(mean_squared_error(y_new_real, y_pred, squared=False))
